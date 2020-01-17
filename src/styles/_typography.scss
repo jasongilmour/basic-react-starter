@@ -1,0 +1,241 @@
+// ==========================================================================
+// Typography
+// ==========================================================================
+
+@import url('https://rsms.me/inter/inter.css');
+
+.metadata {
+	@include visuallyhidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+td {
+	color: inherit;
+	font-weight: 700;
+	overflow: hidden;
+}
+
+.page-title,
+.section-header {
+	font-family: 'Inter', sans-serif;
+	font-size: rem(62);
+	line-height: (74/62);
+	margin: 0 0 rem(32);
+
+	@media (min-width: $bp-xl) {
+		font-size: 162px;
+		line-height: (210/162);
+	}
+}
+
+h1,
+.h1 {
+	font-family: 'Inter', sans-serif;
+	font-size: rem(58);
+	line-height: (80/58);
+	margin: 0 0 rem(32);
+
+	@media (min-width: $bp-xl) {
+		font-size: 118px;
+		line-height: (132/118);
+	}
+}
+
+h2,
+.h2 {
+	font-family: 'Inter', sans-serif;
+	font-size: em(46, 16);
+	line-height: (62/46);
+	margin: 0.6em 0;
+
+	@media (min-width: $bp-xl) {
+		font-size: 64px;
+		line-height: (68/64);
+	}
+}
+
+.gradient-text {
+	@include textGradient(linear-gradient(0deg, #83e46c 0%, #95f3dd 100%));
+
+	@supports (-webkit-background-clip: text) {
+		@media (prefers-color-scheme: light) {
+			background: (linear-gradient(0deg, #83E46C 0%, #46D0BD 100%));
+			background-attachment: fixed;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			transform: translate3d(0, 0, 0);
+		}
+	}
+}
+
+h3,
+.h3 {
+	font-family: 'Inter', sans-serif;
+	font-size: em(38, 16);
+	line-height: (44/38);
+	margin: 0.6em 0;
+
+	@media (min-width: $bp-xl) {
+		font-size: 48px;
+		line-height: (52/48);
+	}
+}
+
+h4,
+.h4 {
+	font-family: 'Inter', sans-serif;
+	font-size: em(24, 16);
+	line-height: (28/24);
+	margin: em(32, 28) 0;
+}
+
+h5,
+.h5 {
+	font-family: 'Inter', sans-serif;
+	font-size: em(12, 16);
+	line-height: 2.083333;
+	margin: em(25, 12) 0;
+}
+
+h6,
+.h6 {
+	font-size: em(8, 16);
+	line-height: 1.5625;
+	margin: em(12.5, 8) 0;
+}
+
+strong,
+.strong {
+	font-weight: $font-bold;
+}
+
+em,
+figcaption {
+	font-style: italic;
+}
+
+figcaption {
+	font-size: em(12, 16);
+	line-height: (16/12);
+	margin: em(16, 12) 0 em(20, 12);
+	text-align: center;
+}
+
+mark {
+	background: $light-gray;
+}
+
+pre {
+	border-radius: 0.5em;
+	overflow-x: auto;
+	white-space: pre;
+	word-break: normal;
+	word-wrap: normal;
+
+	code {
+		border-radius: 0.5em;
+		padding: 0.5em 1em;
+	}
+
+	&.code {
+		padding: 0;
+		border-radius: 0;
+	}
+}
+
+code {
+	background-color: $text-color;
+	border: 1px solid $text-color;
+	color: $white;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+}
+
+// links
+
+a {
+	color: $green;
+	cursor: pointer;
+	text-decoration: underline;
+	transition: color 0.2s ease;
+
+	&:hover,
+	&:active {
+		color: $light-green;
+	}
+}
+
+p,
+dl,
+ol,
+ul {
+	font-size: em(16, 16);
+	line-height: (24/16);
+	margin: 0 0 em(40, 16);
+
+	@media (min-width: $bp-sm) {
+		font-size: em(18, 16);
+	}
+
+	@media (min-width: $bp-lg) {
+		font-size: em(21, 16);
+		line-height: (32/21);
+		margin: 0 0 em(32, 21);
+	}
+
+	img {
+		float: left;
+		margin-right: em(28, 14);
+		vertical-align: baseline;
+
+		&.alignright {
+			float: right;
+			margin-left: em(28, 14);
+		}
+	}
+}
+
+// Lists
+ol,
+ul {
+	li {
+		font-size: 1em;
+		margin-bottom: 1em;
+	}
+}
+
+ol ol {
+	list-style-type: upper-roman;
+}
+
+dl {
+	margin: 1em 0;
+	padding: 0;
+
+	dd {
+		font-style: italic;
+		line-height: 1;
+		margin: 0 0 0.5em 1em;
+	}
+}
+
+// Quotes & citations
+blockquote {
+	border-left: 0.25em solid $text-color;
+	font-size: 1em;
+	margin: 0;
+	padding-left: em(18, 18);
+	text-indent: 1em;
+}
+
+cite {
+	font-size: 0.75em;
+	font-size: 0.75rem;
+	font-style: italic;
+	font-weight: $font-regular;
+}

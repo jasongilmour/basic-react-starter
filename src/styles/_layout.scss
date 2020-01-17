@@ -1,0 +1,52 @@
+// Helpers
+
+.extend-right {
+	max-width: none;
+	width: calc(100% + 32px);
+
+	@media screen and (min-width: $bp-xl) {
+		width: calc(100% + 50vw - 752px + 16px);
+	}
+}
+
+.square {
+	position: relative;
+	align-self: self-start;
+
+	&:before {
+		content: '';
+		display: block;
+		height: 0;
+		padding-bottom: 100%;
+	}
+
+	> div {
+		position: absolute;
+		top: 0;
+	}
+
+	.square-contents {
+		padding: $spacer;
+	}
+}
+
+.offset-border {
+	position: relative;
+
+	&:after {
+		border: 4px solid #F3A735;
+		content: '';
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		transform: translate(40px, 40px);
+		width: 100%;
+		z-index: -1;
+	}
+
+	&.offset-border-before:after {
+		transform: translate(-40px, -40px);
+	}
+}

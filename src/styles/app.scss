@@ -1,0 +1,26 @@
+// Custom tooling
+@import 'mixins';
+@import 'variables';
+
+// Bootstrap functions and settings
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+// Custom variables to set bootstrap colors etc.
+@import 'bootstrap-variables';
+
+// Uncomment the next line to include all of Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Only including the minimum required parts of Bootstrap
+// @import '~bootstrap/scss/vendor/rfs';
+// @import '~bootstrap/scss/mixins';
+// @import '~bootstrap/scss/buttons';
+// @import '~bootstrap/scss/grid';
+// @import '~bootstrap/scss/utilities';
+
+// Custom styles
+@import 'normalize';
+@import 'typography';
+@import 'atmosphere';
+@import 'layout';
+@import 'print';
